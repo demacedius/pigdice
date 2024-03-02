@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Pig dice</title>
-</head>
-<body class=" min-w-[800px] font-primary">
-    <main  class="flex items-center justify-between w-4/5 mx-auto min-h-screen">
-        <section class="player1" >
-            <div class="flex flex-col items-center justify-evenly h-screen p-16">
-                <div class="flex items-center flex-col uppercase">
-                    <h1 class="text-2xl lg:text-4xl font-light">Player 1 </h1>
-                    <p class="text-[4rem] font-light text-red-400">43</p>
-                </div>
-                <span class="flex items-center flex-col bg-red-500  p-4">
-                    <p>CURRENT</p>
-                    <p class="text-white font-light">11</p>
-                </span>
-            </div>
-        </section>
-        <div class="flex items-center justify-between flex-col h-screen py-24">
-            <div class="flex gap-4 items-center">
-                <ion-icon class="text-4xl font-light text-red-300" name="add-circle-outline"></ion-icon> 
-                <p class="font-light text-lg">New Game</p>
-            </div>
-            <img class="w-1/4 lg:w-1/2 shadow-lg" src="image/dice-1.png" alt="">
-            <div class="flex gap-4 flex-col">
-                <div class="flex gap-4 items-center">
-                    <ion-icon class="text-4xl font-light text-red-300" name="sync-outline"></ion-icon>
-                    <p class="text-xl font-light uppercase">roll-up</p>
-                </div>
-                <div class="flex gap-4 items-center">
-                    <ion-icon class="text-4xl font-extralight text-red-300" name="download-outline"></ion-icon>
-                    <p class="text-xl font-light uppercase">hold</p>
-                </div>
-            </div>
+  </head>
+  <body class="min-w-[800px] font-primary">
+    <main class="flex items-center justify-between mx-auto min-h-screen">
+      <section class="player-0-panel active w-1/2">
+        <div class="flex flex-col items-center justify-evenly h-screen p-16">
+          <div class="flex items-center flex-col uppercase">
+            <h1 class="text-2xl lg:text-4xl font-light player-name" id="name-0">Player 1</h1>
+            <p class="text-[4rem] font-light text-red-400 player-score" id="score-0">0</p>
+          </div>
+          <span class="flex items-center flex-col bg-red-500 p-4">
+            <p>CURRENT</p>
+            <p class="text-white font-light" id="current-0">0</p>
+          </span>
         </div>
-        <section class="player2">
-                <div class="flex flex-col items-center justify-evenly h-screen p-16">
-                    <div class="flex items-center flex-col uppercase">
-                        <h1 class="text-2xl lg:text-4xl font-light">Player 2 </h1>
-                        <p class="text-[4rem] font-light text-red-400">43</p>
-                    </div>
-                    <span class="flex items-center flex-col bg-red-500  p-4">
-                        <p>CURRENT</p>
-                        <p class="text-white font-light">11</p>
-                    </span>
-                </div>
-        </section>
+      </section>
+        <div class="flex items-center justify-evenly flex-col h-screen absolute left-1/2 -translate-x-1/2">
+          <div class="flex gap-4 items-center bouton-new ">
+            <ion-icon
+              class="text-4xl font-light text-red-300"
+              name="add-circle-outline"
+            ></ion-icon>
+            <p class="font-light text-lg ">New Game</p>
+          </div>
+          <img class="w-1/4 lg:w-1/2 shadow-lg dice" src="image/dice-1.png" alt="" />
+          <div class="flex gap-4 flex-col">
+            <div class="flex gap-4 items-center btn-roll">
+              <ion-icon
+                class="text-4xl font-light text-red-300"
+                name="sync-outline"
+              ></ion-icon>
+              <p class="text-xl font-light uppercase">roll-up</p>
+            </div>
+            <div class="flex gap-4 items-center btn-hold">
+              <ion-icon
+                class="text-4xl font-extralight text-red-300"
+                name="download-outline"
+              ></ion-icon>
+              <p class="text-xl font-light uppercase">hold</p>
+            </div>
+          </div>
+        </div>
+      <section class="player-1-panel w-1/2">
+        <div class="flex flex-col items-center justify-evenly h-screen p-16">
+          <div class="flex items-center flex-col uppercase">
+            <h1 class="text-2xl lg:text-4xl font-light player-name" id="name-1">Player 2</h1>
+            <p class="text-[4rem] font-light text-red-400 player-score" id="score-1">0</p>
+          </div>
+          <span class="flex items-center flex-col bg-red-500 p-4">
+            <p>CURRENT</p>
+            <p class="text-white font-light" id="current-1">0</p>
+          </span>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
+  <script src="./js/app.js"></script>
 </html>
