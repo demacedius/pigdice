@@ -13,12 +13,11 @@ let counter = 0;
 let s0 = 0;
 let s1 = 0;
 
-dice.style.display = "none"
+setDiceImgSrc(6)
 
 roll.addEventListener("click", () => {
     let rndNum = rnd();
     counter += rndNum;
-    dice.style.display = "block";
     setDiceImgSrc(rndNum);
     if(rndNum !== 1){
         if(panel0.classList.contains("active")){
@@ -71,7 +70,7 @@ function rnd() {
   }
 
   function resetGame() {
-    dice.style.display = "none";
+    setDiceImgSrc(1);
     current0.textContent = 0;
     current1.textContent = 0;
     score0.textContent = 0;
